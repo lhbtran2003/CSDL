@@ -1,0 +1,21 @@
+
+Create database Session_3;
+
+USE Session_3;
+
+CREATE TABLE STUDENT (
+STUDENT_ID INT PRIMARY KEY NOT NULL,
+NAME VARCHAR(255) NOT NULL,
+AGE INT CHECK (AGE >= 18) NOT NULL,
+GENDER VARCHAR(10) CHECK (GENDER IN (‘Male’, ‘Female’, ‘Khac’)),
+REGISTRATION_DATE DATETIME DEFAULT(CURRENT_TIMESTAMP) NOT NULL
+);
+
+INSERT INTO STUDENT (STUDENT_ID, NAME , AGE , GENDER,REGISTRATION_DATE)
+VALUES
+(1, ‘Nguyen Van A’, ‘20’, ‘Male’, ‘2025-01-15 8:30:00’);
+(2, ‘Nguyen Thi B’, ‘22’, ‘Female’, ‘2025-01-14 9:00:00’);
+(3, ‘Le Minh C’, ‘20’, ‘Male’, ‘2025-01-15 8:30:00’);
+(4, ‘Nguyen Van A’, ‘20’, ‘Male’, ‘2025-01-15 8:30:00’);
+(5, ‘Hoang Van E’, ‘20’, ‘Male’, ‘2025-01-15 8:30:00’);
+
